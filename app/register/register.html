@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <form ng-submit="register.register(register.userData)">
+            <label for="fname">First Name: </label>
+            <input type="text" class="form-control" ng-model="register.userData.fname">
+            <label for="lname">Last Name: </label>
+            <input type="text" class="form-control" ng-model="register.userData.lname">
+            <label for="email">Email </label>
+            <input type="text" class="form-control" ng-model="register.userData.email">
+            <label for="password">Password </label>
+            <input type="password" class="form-control" ng-model="register.userData.password">
+            <label for="password">Comfirm Password: </label>
+            <input type="password" class="form-control" ng-model="register.passwordConfirmation">
+            <input type="submit" value="REGISTER" ng-disabled="register.userData.password !== register.passwordConfirmation">
+        </form>
+    </div>
+</div>
+<div class="container" ng-repeat="users in register.users">
+    <h1>{{users.fname}} {{users.lname}}</h1>
+</div>
